@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Something Incredible Is Coming</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#060816;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+    padding:20px;
+    color:white;
+}
+
+/* Animated Background */
+
+.bg1,
+.bg2{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.bg1{
+    background:#7c3aed55;
+    top:-150px;
+    left:-100px;
+    animation:move1 10s infinite alternate;
+}
+
+.bg2{
+    background:#06b6d455;
+    bottom:-150px;
+    right:-100px;
+    animation:move2 10s infinite alternate;
+}
+
+@keyframes move1{
+    from{transform:translate(0,0);}
+    to{transform:translate(80px,60px);}
+}
+
+@keyframes move2{
+    from{transform:translate(0,0);}
+    to{transform:translate(-70px,-50px);}
+}
+
+/* Floating Hearts */
+
+.hearts span{
+    position:absolute;
+    bottom:-50px;
+    color:#ff4d8d;
+    opacity:.6;
+    animation:float 12s linear infinite;
+}
+
+.hearts span:nth-child(1){left:10%;font-size:18px;animation-delay:0s;}
+.hearts span:nth-child(2){left:30%;font-size:24px;animation-delay:4s;}
+.hearts span:nth-child(3){left:50%;font-size:16px;animation-delay:2s;}
+.hearts span:nth-child(4){left:70%;font-size:20px;animation-delay:6s;}
+.hearts span:nth-child(5){left:90%;font-size:22px;animation-delay:3s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) scale(0);
+        opacity:0;
+    }
+    20%{
+        opacity:.7;
+    }
+    100%{
+        transform:translateY(-110vh) scale(1.4);
+        opacity:0;
+    }
+}
+
+/* Card */
+
+.container{
+    width:100%;
+    max-width:520px;
+    padding:32px 24px;
+    border-radius:28px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,0.08);
+    text-align:center;
+    position:relative;
+    z-index:2;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+/* Top Tag */
+
+.tag{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:40px;
+    background:linear-gradient(90deg,#7c3aed,#06b6d4);
+    font-size:11px;
+    letter-spacing:1px;
+    margin-bottom:18px;
+    box-shadow:0 0 20px rgba(124,58,237,.5);
+}
+
+/* Title */
+
+h1{
+    font-size:2.3rem;
+    line-height:1.3;
+    margin-bottom:15px;
+    background:linear-gradient(to right,#ffffff,#c084fc,#38bdf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Description */
+
+.message{
+    color:#d1d5db;
+    font-size:14px;
+    line-height:1.9;
+    margin-top:12px;
+}
+
+.highlight{
+    color:#ff70ad;
+    font-weight:600;
+}
+
+/* Countdown */
+
+.countdown{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:30px;
+}
+
+.box{
+    background:rgba(255,255,255,0.05);
+    border-radius:18px;
+    padding:15px 5px;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(124,58,237,.3);
+}
+
+.box h2{
+    color:#38bdf8;
+    font-size:1.5rem;
+}
+
+.box p{
+    font-size:11px;
+    color:#94a3b8;
+    margin-top:4px;
+}
+
+/* Button */
+
+.btn{
+    margin-top:28px;
+    border:none;
+    padding:13px 28px;
+    border-radius:40px;
+    background:linear-gradient(90deg,#7c3aed,#06b6d4);
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 0 20px rgba(124,58,237,.4);
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+
+.footer{
+    margin-top:18px;
+    font-size:12px;
+    color:#94a3b8;
+}
+
+.footer span{
+    color:#c084fc;
+    font-weight:600;
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+    h1{
+        font-size:1.9rem;
+    }
+
+    .message{
+        font-size:13px;
+    }
+
+    .box h2{
+        font-size:1.2rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="hearts">
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+</div>
+
+<div class="container">
+
+    <div class="tag">
+        EXCLUSIVE PROJECT ✨
+    </div>
+
+    <h1>Something Incredible<br>Is On The Way</h1>
+
+    <div class="message">
+
+        This upcoming website has been handed over to a 
+        <span class="highlight">truly talented developer</span> 
+        with over <span class="highlight">5 years of experience</span> in crafting beautiful digital experiences 🚀
+        
+        <br><br>
+
+        What you're about to see soon is not just a website —
+        it's going to be a complete experience 💜
+
+    </div>
+
+    <div class="countdown">
+
+        <div class="box">
+            <h2 id="days">15</h2>
+            <p>Days</p>
+        </div>
+
+        <div class="box">
+            <h2 id="hours">00</h2>
+            <p>Hours</p>
+        </div>
+
+        <div class="box">
+            <h2 id="minutes">00</h2>
+            <p>Minutes</p>
+        </div>
+
+        <div class="box">
+            <h2 id="seconds">00</h2>
+            <p>Seconds</p>
+        </div>
+
+    </div>
+
+    <button class="btn">
+        Awaiting The Grand Reveal ✨
+    </button>
+
+    <div class="footer">
+        Crafted with ❤ by <span>The Best Developer</span>
+    </div>
+
+</div>
+
+<script>
+
+/* LIVE 15 DAYS COUNTDOWN */
+
+const targetDate = new Date();
+targetDate.setDate(targetDate.getDate() + 15);
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+</html>
